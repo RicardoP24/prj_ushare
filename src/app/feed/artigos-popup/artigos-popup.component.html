@@ -1,0 +1,73 @@
+<div class="popup">
+
+
+    <div class="texto-botaox">
+        <h2 class="anuncio">Os meus anúncios</h2>
+        <img (click)="close()" src="assets/fechar.svg" width="20px">
+    </div>
+    <div class="line"></div>
+
+    <div class="options">
+        <div class="artigos" [class.active]="selectedOption === 'artigos'" (click)="selectOption('artigos')">
+            <img src="assets/patient-list-icon.svg" class="iconArt" />
+            <p class="artSoli">Solicitados</p>
+        </div>
+
+        <div class="avaliable" [class.active]="selectedOption === 'avaliable'" (click)="selectOption('avaliable')">
+            <img src="assets/popupA.svg" class="iconAvaliable" />
+            <p class="artDisponiveis">Disponibilizados</p>
+        </div>
+
+        <div class="alertas" [class.active]="selectedOption === 'alertas'" (click)="selectOption('alertas')">
+            <img src="assets/Bell.svg" class="iconAlerta" />
+            <p class="alertas">Alertas</p>
+        </div>
+
+        <div class="eventos" [class.active]="selectedOption === 'eventos'" (click)="selectOption('eventos')">
+            <img src="assets/ClipboardCheckOutline.svg" class="iconEventos" />
+            <p class="eventos">Eventos</p>
+        </div>
+
+    </div>
+    <div class="posts">
+        <div class="mypost">
+            <div class="owner">
+                <div class="postAuthor">
+                    <div class="profile-photo">
+                        <img src="assets/ellipse-1-icon.svg">
+                    </div>
+                    <div class="post-author">
+                        <p class="nome">Name of the Person</p>
+                        <p class="data">{{ postCreationDate | date:'dd.MM.yyyy HH:mm' }}</p>
+                    </div>
+                </div>
+                <button class="botaoInfo">
+                    <img src="assets/informationcircleoutline-icon2.svg" class="iconInfo" />
+                </button>
+            </div>
+            <div class="line"></div>
+
+            <p>texto</p>
+
+            <div class="post-content">
+                <img width="100%" src="assets/rectangle30.jpeg" class="carpic">
+            </div>
+
+            <div class="line"></div>
+
+            <div class="bottom-sec">
+                <div (click)="verInteressados()" class="info">
+                    <img src="assets/Inter.svg">
+                    <p class="inter">Ver interessados</p>
+                </div>
+
+                <div (click)="openComentarios()" class="coment">
+                    <img src="assets/staroutline-icon6.svg">
+                    <p class="com">Comentários</p>
+                </div>
+            </div>
+
+            <div class="line"></div>
+        </div>
+    </div>
+</div>

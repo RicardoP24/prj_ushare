@@ -1,0 +1,38 @@
+<div class="event" >
+
+    <div class="post-header">
+
+        <div class="org-photo">
+            <img src="assets/ellipse-1-icon.svg">
+        </div>
+
+        <div class="event-author">
+            <p>Name of the Org</p>
+            <p class="data">{{ postCreationDate | date:'dd.MM.yyyy HH:mm' }}</p>
+        </div>
+
+    </div>
+
+
+    <div class="line1"></div>
+
+
+    <div class="post-content">
+        <p>texto</p>
+    </div>
+
+
+    <div class="line1"></div>
+
+
+    <div class="comment-sec">
+        <div (click)="openChat()" class="info">
+            <img src="assets/vector-icon7.svg">
+            <p>Mais Infomaçoes</p>
+        </div>
+        <div (click)="openComentarios()" class="coment">
+            <img src="assets/staroutline-icon6.svg">
+            <p>Comentários</p>
+        </div>
+    </div>
+</div>
